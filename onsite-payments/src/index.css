@@ -12,7 +12,7 @@ body {
 }
 
 h1 {
-  font-family: 'Titillium Web', sans-serif; /* Or 'Nunito', depending on your choice */
+  font-family: 'Titillium Web', sans-serif; 
 }
 
 
@@ -22,7 +22,7 @@ code {
 }
 
 section {
-  scroll-margin-top: 80px; /* Adjust based on your header height */
+  scroll-margin-top: 80px; 
 }
 html {
   scroll-behavior: smooth;

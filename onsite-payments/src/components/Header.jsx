@@ -37,72 +37,106 @@ const Header = () => {
         <nav className={`md:flex space-x-6 text-lg hidden md:block ml-auto`}>
           <ul className="md:flex space-x-6 text-lg">
             <li>
-              <a href="#features" onClick={handleMenuItemClick} className="text-gray-800 hover:bg-[#FFA900] hover:text-white px-4 py-2 rounded-full transition-colors duration-300">Features</a>
+              <a href="#features" onClick={handleMenuItemClick} className="text-gray-800 hover:bg-[#FFA900] hover:text-white px-4 py-2 rounded-full transition-transform duration-700 transform hover:scale-105 hover:shadow-lg">Features</a>
             </li>
             <li>
-              <a href="#solutions" onClick={handleMenuItemClick} className="text-gray-800 hover:bg-[#FFA900] hover:text-white px-4 py-2 rounded-full transition-colors duration-300">Solutions</a>
+              <a href="#solutions" onClick={handleMenuItemClick} className="text-gray-800 hover:bg-[#FFA900] hover:text-white px-4 py-2 rounded-full transition-transform duration-700 transform hover:scale-105 hover:shadow-lg">Solutions</a>
             </li>
             <li>
-              <a href="#support" onClick={handleMenuItemClick} className="text-gray-800 hover:bg-[#FFA900] hover:text-white px-4 py-2 rounded-full transition-colors duration-300">Support</a>
+              <a href="#support" onClick={handleMenuItemClick} className="text-gray-800 hover:bg-[#FFA900] hover:text-white px-4 py-2 rounded-full transition-transform duration-700 transform hover:scale-105 hover:shadow-lg">Support</a>
             </li>
             <li>
-              <a href="#contact" onClick={handleMenuItemClick} className="text-gray-800 hover:bg-[#FFA900] hover:text-white px-4 py-2 rounded-full transition-colors duration-300">Contact</a>
+              <a href="#contact" onClick={handleMenuItemClick} className="text-gray-800 hover:bg-[#FFA900] hover:text-white px-4 py-2 rounded-full transition-transform duration-700 transform hover:scale-105 hover:shadow-lg">Contact</a>
             </li>
           </ul>
         </nav>
 
         {/* Get Started Button (visible on large screens) */}
-        <button className="hidden md:block border-2 border-[#FFA900] text-[#FFA900] px-6 py-2 rounded-full hover:bg-[#FFA900] hover:text-white transition-colors duration-300 ml-6">
-          <span className="font-bold">Get Started</span>
+        <button 
+          onClick={handleMenuItemClick}  // Close menu and handle navigation
+          className="hidden md:block border-2 border-[#FFA900] text-[#FFA900] px-6 py-2 rounded-full hover:bg-[#FFA900] hover:text-white transition-transform duration-700 transform hover:scale-105 hover:shadow-lg ml-6"
+        >
+          <a href="#contact">
+            <span className="font-bold">Get Started</span>
+          </a>
         </button>
       </div>
 
-      {/* Mobile Menu: Align buttons vertically when screen is small */}
-      {isOpen && (
-        <div className="md:hidden flex flex-col items-center mt-8 space-y-4 max-h-72 overflow-auto">  {/* Limit height */}
-          <ul className="space-y-4 text-lg text-center pt-2">  {/* Added padding-top to ul */}
-            <li>
+      {/* Mobile Menu: Smooth opening/closing with staggered buttons */}
+      <div
+        className={`md:hidden transition-all duration-1000 ease-in-out transform ${
+          isOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0 overflow-hidden'
+        }`}
+      >
+        <div className="flex flex-col items-center mt-8 space-y-4">
+          <ul className="space-y-4 text-lg text-center pt-2">
+            <li
+              className={`transition-opacity duration-1000 ease-in-out transform ${
+                isOpen ? 'opacity-100 translate-y-0 delay-200' : 'opacity-0 -translate-y-5'
+              }`}
+            >
               <a 
                 href="#features" 
                 onClick={handleMenuItemClick}  // Close menu on click
-                className="text-gray-800 hover:bg-[#FFA900] hover:text-white px-4 py-2 rounded-full transition-colors duration-300"
+                className="text-gray-800 hover:bg-[#FFA900] hover:text-white px-4 py-2 rounded-full transition-transform duration-700 transform hover:scale-105 hover:shadow-lg"
               >
                 Features
               </a>
             </li>
-            <li>
+            <li
+              className={`transition-opacity duration-1000 ease-in-out transform ${
+                isOpen ? 'opacity-100 translate-y-0 delay-300' : 'opacity-0 -translate-y-5'
+              }`}
+            >
               <a 
                 href="#solutions" 
                 onClick={handleMenuItemClick}  // Close menu on click
-                className="text-gray-800 hover:bg-[#FFA900] hover:text-white px-4 py-2 rounded-full transition-colors duration-300"
+                className="text-gray-800 hover:bg-[#FFA900] hover:text-white px-4 py-2 rounded-full transition-transform duration-700 transform hover:scale-105 hover:shadow-lg"
               >
                 Solutions
               </a>
             </li>
-            <li>
+            <li
+              className={`transition-opacity duration-1000 ease-in-out transform ${
+                isOpen ? 'opacity-100 translate-y-0 delay-400' : 'opacity-0 -translate-y-5'
+              }`}
+            >
               <a 
                 href="#support" 
                 onClick={handleMenuItemClick}  // Close menu on click
-                className="text-gray-800 hover:bg-[#FFA900] hover:text-white px-4 py-2 rounded-full transition-colors duration-300"
+                className="text-gray-800 hover:bg-[#FFA900] hover:text-white px-4 py-2 rounded-full transition-transform duration-700 transform hover:scale-105 hover:shadow-lg"
               >
                 Support
               </a>
             </li>
-            <li>
+            <li
+              className={`transition-opacity duration-1000 ease-in-out transform ${
+                isOpen ? 'opacity-100 translate-y-0 delay-500' : 'opacity-0 -translate-y-5'
+              }`}
+            >
               <a 
                 href="#contact" 
                 onClick={handleMenuItemClick}  // Close menu on click
-                className="text-gray-800 hover:bg-[#FFA900] hover:text-white px-4 py-2 rounded-full transition-colors duration-300"
+                className="text-gray-800 hover:bg-[#FFA900] hover:text-white px-4 py-2 rounded-full transition-transform duration-700 transform hover:scale-105 hover:shadow-lg"
               >
                 Contact
               </a>
             </li>
           </ul>
-          <button className="mt-6 border-2 border-[#FFA900] text-[#FFA900] px-6 py-2 rounded-full hover:bg-[#FFA900] hover:text-white transition-colors duration-300">
-            <span className="font-bold">Get Started</span>
+
+          {/* Separate 'Get Started' button with its own transition */}
+          <button 
+            className={`mt-6 border-2 border-[#FFA900] text-[#FFA900] px-6 py-2 rounded-full hover:bg-[#FFA900] hover:text-white transition-opacity duration-1000 ease-in-out transform ${
+              isOpen ? 'opacity-100 translate-y-0 delay-600' : 'opacity-0 -translate-y-5'
+            }`}
+            onClick={handleMenuItemClick}  // Close menu and handle navigation
+          >
+            <a href="#contact">
+              <span className="font-bold">Get Started</span>
+            </a>
           </button>
         </div>
-      )}
+      </div>
     </header>
   );
 }

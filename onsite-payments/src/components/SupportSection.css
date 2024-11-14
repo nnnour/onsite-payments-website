@@ -1,0 +1,18 @@
+/* SupportSection.css */
+.bg-noise-light-green {
+    background-color: #E8F5E9; /* Light green shade close to #8EC221 */
+    position: relative;
+    overflow: hidden;
+}
+
+.bg-noise-light-green::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background-image: url("https://www.transparenttextures.com/patterns/noise.png");
+    opacity: 0.1; /* Adjust the opacity for a softer noise effect */
+}

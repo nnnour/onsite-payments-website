@@ -1,6 +1,8 @@
 # 🌟 Onsite Payments 🌟  
 **The official website for the Onsite Payments startup!**  
 
+![Onsite Payments Demo](onsitepayments.gif)
+
 ## 🚀 Project Overview  
 **Onsite Payments** is the modern, responsive website designed to represent the startup and provide seamless payment management for businesses. This project focuses on delivering a clean user experience, scalable functionality, and a professional deployment strategy to establish the brand's online presence.
 
@@ -38,4 +40,4 @@
    - Tab displays the “Onsite Payments” title and logo, reflecting the app's branding.  
 
 ## 🌐 Deployment  
-The app is live! Check it out here: **[Onsite Payments](https://onsite-payments.com)** 🚀  
+The app is live! Check it out here: **[Onsite Payments](https://onsite-payments.com)** 🚀

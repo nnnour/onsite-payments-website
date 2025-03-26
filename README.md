@@ -34,7 +34,7 @@
    - Error handling ensures users fill in accurate and complete information.  
 
 2. **Validated Contact Form**:  
-   - Real-time validation for empty fields, invalid email formats, and numeric-only phone numbers.  
+   - Real-time validation for empty fields, invalid email formats, and numeric-only phone numbers. 
 
 3. **Custom Branding**:  
    - Tab displays the “Onsite Payments” title and logo, reflecting the app's branding.  
